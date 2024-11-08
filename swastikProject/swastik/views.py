@@ -5,7 +5,7 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'home.html')
 
-def products(request):
+def product(request):
     return  render(request, 'product.html')
 
 def aboutus(request):
@@ -41,5 +41,5 @@ def santrairyiteams(request):
 def surgicalparts(request):
     return render(request,  'surgical-parts.html')
 
-def watermeterconnector(request):
-    return render(request, 'water-meter-connector.html')
+def brassballvalve(request):
+    return render(request, 'brass-ball-valve.html')

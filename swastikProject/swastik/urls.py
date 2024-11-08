@@ -4,7 +4,7 @@ from swastik import views
 urlpatterns = [
     path("",views.home,name="Home"),
     path("home", views.home, name="Home"),
-    path("products", views.products,name="Products"),
+    path("product", views.product,name="Products"),
     path("aboutus", views.aboutus, name="AboutUs"),
     path("getintouch", views.getintouch, name="GetinTouch"),
     path("bicyclepumpparts",views.bicyclepumpparts, name="BicyclePumpParts"),
@@ -15,4 +15,5 @@ urlpatterns = [
     path("electricalparts", views.electricalparts, name="ElectricalParts"),
     path("hexnutsbolts", views.hexnutsbolts, name="HexNutsBolts"),
     path("surgicalparts", views.surgicalparts, name="SurgicalParts"),
+    path("brassballvalve", views.brassballvalve, name="BrassBallValve"),
 ]
