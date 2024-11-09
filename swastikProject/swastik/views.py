@@ -21,7 +21,7 @@ def brassinsertproducts(request):
     return render(request, 'brass-insert-products.html')
 
 def brasssensitiveolivalve(request):
-    return render(request, 'brass-sensitive-oli-valve.html')
+    return render(request, 'brass-sensitive-oil-valves-products.html')
 
 def brassterminal(request):
     return render(request, 'brass-terminal.html')
