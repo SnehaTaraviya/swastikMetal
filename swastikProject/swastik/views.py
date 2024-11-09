@@ -24,7 +24,7 @@ def brasssensitiveolivalve(request):
     return render(request, 'brass-sensitive-oil-valves-products.html')
 
 def brassterminal(request):
-    return render(request, 'brass-terminal.html')
+    return render(request, 'brass-terminals.html')
 
 def brasswingnutsproducts(request):
     return render(request, 'brass-wing-nuts-products.html')
@@ -35,8 +35,8 @@ def electricalparts(request):
 def hexnutsbolts(request):
     return render(request,  'hex-nuts-bolts.html')
 
-def santrairyiteams(request):
-    return render(request, 'santrairy-iteams.html')
+def sanitaryiteams(request):
+    return render(request, 'sanitary-iteams.html')
 
 def surgicalparts(request):
     return render(request,  'surgical-parts.html')

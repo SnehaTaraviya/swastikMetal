@@ -16,4 +16,5 @@ urlpatterns = [
     path("hexnutsbolts", views.hexnutsbolts, name="HexNutsBolts"),
     path("surgicalparts", views.surgicalparts, name="SurgicalParts"),
     path("brassballvalve", views.brassballvalve, name="BrassBallValve"),
+    path("sanitaryiteams", views.sanitaryiteams, name="SanitaryIteams"),
 ]
