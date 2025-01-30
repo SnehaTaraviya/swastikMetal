@@ -7,10 +7,6 @@ class Getintouch(models.Model):
     firstname = models.CharField(max_length=50)
     lastname = models.CharField(max_length=50)
     email = models.EmailField()
-    countrycode = models.CharField(max_length=10)
-    phone = models.CharField(max_length=10)
-    company = models.CharField(max_length=30)
-    address = models.CharField(max_length=1000)
     message = models.TextField(max_length=5000)
     
     def __str__(self):

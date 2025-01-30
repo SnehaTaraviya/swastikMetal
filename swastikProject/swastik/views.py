@@ -14,63 +14,25 @@ def aboutus(request):
     return render(request, 'aboutus.html')
 
 def getintouch(request):
-   
     if request.method == "POST":
         firstname = request.POST.get('firstname')
         lastname = request.POST.get('lastname')
         email = request.POST.get('email')
-        countrycode = request.POST.get('')
-        phone = request.POST.get('phone')
-        company = request.POST.get('company')
-        address = request.POST.get('address')
         message = request.POST.get('message')
-        getintouchs = Getintouch(firstname = firstname, lastname = lastname,email = email, phone = phone, company = company,address = address,message = message)
+        getintouchs = Getintouch(firstname = firstname, lastname = lastname,email = email,message = message)
         getintouchs.save()
-        sendMailToHost(firstname,lastname,email,phone,company,address,message) 
+        sendMailToHost(firstname,lastname,email,message) 
         sendMailToCustomer(firstname,lastname,email)
         return render(request, 'thankyou.html')
     return render(request, 'getintouch.html')
 
-def bicyclepumpparts(request):
-    return render(request, 'bicycle-pump-parts.html')
-
-def brassinsertproducts(request):
-    return render(request, 'brass-insert-products.html')
-
-def brasssensitiveolivalve(request):
-    return render(request, 'brass-sensitive-oil-valves-products.html')
-
-def brassterminal(request):
-    return render(request, 'brass-terminals.html')
-
-def brasswingnutsproducts(request):
-    return render(request, 'brass-wing-nuts-products.html')
-
-def electricalparts(request):
-    return render(request, 'electrical-parts.html')
-
-def hexnutsbolts(request):
-    return render(request,  'hex-nuts-bolts.html')
-
-def sanitaryiteams(request):
-    return render(request, 'sanitary-iteams.html')
-
-def surgicalparts(request):
-    return render(request,  'surgical-parts.html')
-
-def brassballvalve(request):
-    return render(request, 'brass-ball-valve.html')
-
-def sendMailToHost(firstname,lastname,email,phone,comapny,address,message):
+def sendMailToHost(firstname,lastname,email,message):
     subject = "New Enquiry at Swastik Metal"
     message = f'''
     New Enquiry
     
     Name: {firstname} {lastname}
     Email: {email}
-    Contact No: {phone}
-    Company Name: {comapny}
-    Address: {address}
     Message: {message}
     '''
     email_from = f'Swastik Metal<{settings.EMAIL_HOST_USER}>'
@@ -86,11 +48,7 @@ def sendMailToCustomer(firstname,lastname,email):
     message = f'''
 Hello, {firstname} {lastname}
 
-Thank you for reaching out to Swastik Metal. We appreciate your interest in our brass products and services. Your inquiry is important to us, and our team is already reviewing your request.
-
-We strive to respond to all inquiries promptly and will get back to you as soon as possible with the information you need. If you have any additional questions or require further assistance in the meantime, please feel free to contact us directly.
-
-Thank you once again for considering Swastik Metal. We look forward to the opportunity to assist you.
+Thank you for reaching out to Swastik Metal! We appreciate your interest and are reviewing your request. We’ll get back to you shortly—stay tuned!
 
 Best regards,
 Yash Taraviya, COO
